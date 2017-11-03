@@ -1,0 +1,97 @@
+/* Règles générales */
+
+*:before, *after {
+	box-sizing: inherit;
+}
+html * {
+	box-sizing: border-box;
+}
+body {
+	color: #1d1a19;
+	font-family: 'Alice', serif;
+	text-align: center;
+	font-size: 16px;
+	line-height: 1.6rem;
+}
+
+h1 {
+	position: relative;
+	font-family: "Playfair Display SC", serif;
+	font-weight: normal;
+	font-size: 2.25rem;
+	line-height: 3rem;
+	font-style: italic;
+	padding: 0 2.25rem 2.75rem;
+	border-bottom: 1px solid #fff;
+
+	color: #fff;
+	z-index: 10;
+}
+
+.parallax-container {
+	position: relative;
+	height: 500px;
+	overflow: hidden;
+
+	display: flex;
+	flex-flow: column;
+	justify-content: center;
+	align-items: center;
+
+	text-shadow: 2px 2px 15px rgba(0, 0, 0, 0.5);
+}
+
+.parallax {
+		width: 100%;
+		height: 100%;
+
+		position: absolute;
+		top: 0;
+		left: 0;
+
+		background-size: cover;
+}
+
+
+.block1 {
+	background: url("../img/img_homepage_slider1.jpg") no-repeat center;
+}
+
+.block2 {
+	background: url("../img/img_homepage_divider.jpg") no-repeat center;
+}
+
+.block3 {
+	background: url("../img/img_homepage_footer.jpg") no-repeat center;
+}
+
+#shop, #about, #contact {
+	padding: 4rem;
+}
+
+/*Shop*/
+
+#shop {
+	background: #fff;
+}
+
+/*about*/
+
+#about {
+	background: #f4efde;
+}
+
+/* Footer */
+
+#contact {
+	background: #dba539;
+}
+
+@media screen and (min-width: 640px) {
+
+	h1 {
+		font-size: 5rem;
+		line-height: 5rem;
+	}
+
+}
