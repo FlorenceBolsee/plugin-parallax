@@ -2,15 +2,11 @@ var windowHeight = $(window).height();
 var parallaxEffect; //niveau de scroll de la page transformé en valeur du top du block
 
 var scrollLevel; //niveau de scroll de la page
-var scrollparallax; //niveau de scroll moins l'offset().top de la zone dans laquelle l'effet parallax se produit
+var scrollParallax; //niveau de scroll moins l'offset().top de la zone dans laquelle l'effet parallax se produit
 
 var $block1 = $(".block1");
 var $block2 = $(".block2");
 var $block3 = $(".block3");
-
-//pour adapter les blocks en fonction du data attribute "parallax"
-var newHeight;
-var newTop;
 
 //Pas besoin d'ajouter la hauteur de fenêtre pour le premier block car son offset().top est 0
 var block1Top = $block1.offset().top;
@@ -41,8 +37,8 @@ $(document).ready(
   function(){
     $(".parallax").each(
       function(){
-        newTop = "-" + $(this).data("parallax") + "px";
-        newHeight = $(this).data("parallax") + $(this).height() + "px";
+        var newTop = "-" + $(this).data("parallax");
+        var newHeight = $(this).data("parallax") + $(this).height();
         $(this).css({
           'height': newHeight,
           'top': newTop
@@ -58,16 +54,16 @@ $(document).scroll(
     scrollLevel = $(window).scrollTop();
 
     if(scrollLevel > block1Top && scrollLevel < block1Bot) {
-      scrollparallax = scrollLevel - block1Top;
-      parallax (scrollparallax, block1Height, $block1, block1Parallax);
+      scrollParallax = scrollLevel - block1Top;
+      parallax (scrollParallax, block1Height, $block1, block1Parallax);
     }
     if(scrollLevel > block2Top && scrollLevel < block2Bot){
-      scrollparallax = scrollLevel - block2Top;
-      parallax (scrollparallax, block2Height, $block2, block2Parallax);
+      scrollParallax = scrollLevel - block2Top;
+      parallax (scrollParallax, block2Height, $block2, block2Parallax);
     }
     if(scrollLevel > block3Top && scrollLevel < block3Bot){
-      scrollparallax = scrollLevel - block3Top;
-      parallax (scrollparallax, block3Height, $block3, block3Parallax);
+      scrollParallax = scrollLevel - block3Top;
+      parallax (scrollParallax, block3Height, $block3, block3Parallax);
     }
 
   }
