@@ -59,11 +59,11 @@ $(document).scroll(
 
     if(scrollLevel > block1Top && scrollLevel < block1Bot) {
       scrollparallax = scrollLevel - block1Top;
-      parallax (scrollparallax, block1Height, $block1, block3Parallax);
+      parallax (scrollparallax, block1Height, $block1, block1Parallax);
     }
     if(scrollLevel > block2Top && scrollLevel < block2Bot){
       scrollparallax = scrollLevel - block2Top;
-      parallax (scrollparallax, block2Height, $block2, block3Parallax);
+      parallax (scrollparallax, block2Height, $block2, block2Parallax);
     }
     if(scrollLevel > block3Top && scrollLevel < block3Bot){
       scrollparallax = scrollLevel - block3Top;
