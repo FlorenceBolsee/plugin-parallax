@@ -1,11 +1,11 @@
 /* Règles générales */
-
-*:before, *after {
-	box-sizing: inherit;
-}
-html * {
+html {
 	box-sizing: border-box;
 }
+*, *::before, *::after {
+	box-sizing: inherit;
+}
+
 body {
 	color: #1d1a19;
 	font-family: 'Alice', serif;
